@@ -104,12 +104,12 @@ void setup() {
     }
   }
   FillRect(0, 0, 319, 219, 0x421b);
-  String text1 = "Megaman!";
-  LCD_Print(text1, 30, 20, 2, 0xffff, 0xD090);
+  String text1 = "Level 1";
+  LCD_Print(text1, 0, 20, 2, 0xffff, 0xD090);
 
   hacerpiso();
   String score = "Score:";
-  LCD_Print(score, 200, 50, 2, 0x0000, 0xD090);
+  LCD_Print(score, 0, 0, 2, 0x0000, 0xD090);
 
 
 }
@@ -648,7 +648,7 @@ void hacerpiso() {
 void empezarjuego() {
   FillRect(0, 0, 319, 219, 0x00ff);
   String Start1 = "Welcome to:";
-  String Start2 = "Megaman";
+  String Start2 = "MEGA-MAN";
   String Player1 = "Single Player";
   String Player2 = "Multiplayer";
   LCD_Print(Start1, 50, 50, 1, 0xFF00, 0x0000);
@@ -709,9 +709,9 @@ void gameover() {
   Start = false;
   FillRect(0, 0, 319, 219, 0x421b);
   while (!Start) {
-    String over = "Megaman!";
+    String over = "GAME OVER!!!";
     LCD_Print(over, 100, 100, 2, 0xffff, 0xD090);
-    String again = "apacha salto para empezar";
+    String again = "Press jump to return";
     LCD_Print(again, 100, 150, 1, 0xf420, 0x0000);
     bottomestado = digitalRead(buttonPin);
     if (bottomestado== LOW) {
@@ -727,7 +727,7 @@ void gameover() {
     }
   }
   FillRect(0, 0, 319, 219, 0x421b);
-  String text1 = "Megaman!";
+  String text1 = "MEGA-MAN!";
   LCD_Print(text1, 30, 20, 2, 0xffff, 0xD082);
   hacerpiso();
 }
